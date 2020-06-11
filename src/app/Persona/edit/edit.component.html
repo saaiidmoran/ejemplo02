@@ -1,0 +1,19 @@
+<div class="container mt-4 col-md-6">
+    <div class="card text-white bg-dark">
+        <div class="card-header">
+            <h3 class="text-center">Modificar persona</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <input [(ngModel)]="persona.idpersona" type="hidden" name="id" id="id">
+                <div class="form-group">
+                    <label for="nombre">Nombres:</label>
+                    <input [(ngModel)]="persona.nombre" type="text" name="nombre" id="nombre" class="form-control">
+                </div>
+                <div class="text-center">
+                    <button (click)="Actualizar(persona)" class="btn btn-primary">Actualizar</button>
+                </div>                
+            </form>
+        </div>
+    </div>
+</div>

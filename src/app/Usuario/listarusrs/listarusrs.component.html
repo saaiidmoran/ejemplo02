@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <div class="card text-white bg-dark">
+        <div class="card-header">
+            <div class="text-right">
+                <button (click)="AgregarUsuarios()" class="btn btn-success" title="Agregar">+</button>
+            </div>
+            <h3 class="text-center">USUARIOS REGISTRADOS</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive" style="height: 350px; margin-bottom: 10px;">
+                <table class="table table-hover table-dark table-borderless">
+                    <thead>
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>USUARIO</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let usuario of usuarios" class="text-center">
+                            <td>{{usuario.idusuario}}</td>
+                            <td>{{usuario.nombre}}</td>
+                            <td>
+                                <button (click)="EditarUsuario(usuario)" class="btn btn-warning" style="margin: 10px;">Editar</button>
+                                <button (click)="DeleteUsuario(usuario)" class="btn btn-danger" style="margin: 10px;">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+</div>
